@@ -1,0 +1,62 @@
+baseURL = "https://npsnt.ru"
+languageCode = "ru-ru"
+title = "Северная Жемчужина"
+theme = "ezhil"
+copyright = "© 2021 СНТ Северная Жемчужина"
+
+[params]
+	# Blog subtitle which appears below blog title. Supports markdown.
+	subtitle = "Садоводческое некомерческое товарищество"
+	# Number of posts to show in recent posts list (Optional). Defaults to 10.
+	recentPostsCount = 10
+	# Content types which are included in home page recent posts list.
+	mainSections = ["news"]
+	# Content types which are excluded from recent posts and archive page (Optional). Defaults to ["page"]
+	excludedTypes = ["page"]
+	# If social media links are enabled then enable this to fetch icons from CDN instead of hosted on your site.
+	featherIconsCDN = true
+
+	# Switch to dark mode or auto detect mode from OS (Optional).
+	# "dark" will set mode to dark and "auto" will switch to dark mode if OS is in dark mode.
+	mode = "auto" # "dark" or "auto"
+
+	# Custom CSS added to default styles. Files added to `static` folder is copied as it is to
+	# root by Hugo. For example if you have custom CSS file under `static/css/custom.css` then
+	# you can specify custom css path as `css/custom.css`.
+	customCSS = "css/light.css"
+
+# main buttons
+[[menu.main]]
+name = "Новости"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "О нас"
+url = "/about/"
+weight = 2
+
+[[menu.main]]
+name = "Контакты"
+url = "/contacts/"
+weight = 3
+
+[[menu.main]]
+name = "Личный кабинет"
+url = "/profile/"
+weight = 4
+
+# social
+[[params.social]]
+name = "RSS FEED"
+icon = "rss"
+url = "/news/index.xml"
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/npsnt"
+
+# config
+[outputs]
+home = ["HTML","RSS"]
