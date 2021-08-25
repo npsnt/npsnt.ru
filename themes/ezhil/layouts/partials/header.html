@@ -34,10 +34,8 @@
 	{{- end }}
 	{{- end }}
 
-	{{ if and (isset .Site.Params "social") (isset .Site.Params "feathericonscdn") (eq .Site.Params.featherIconsCDN true) -}}
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-	{{- else if (isset .Site.Params "social") -}}
-	<script src="{{ .Site.BaseURL }}js/feather.min.js"></script>
+	{{ if and (isset .Site.Params "social") (isset .Site.Params "awesomeiconscdn") (eq .Site.Params.awesomeIconsCDN true) -}}
+	<link rel="stylesheet" href="css/font-awesome.css">
 	{{ end }}
 	<script src="{{ .Site.BaseURL }}js/main.js"></script>
 	{{- if isset .Site.Params "customjs" -}}

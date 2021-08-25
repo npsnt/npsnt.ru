@@ -14,7 +14,7 @@ copyright = "© 2021 СНТ Северная Жемчужина"
 	# Content types which are excluded from recent posts and archive page (Optional). Defaults to ["page"]
 	excludedTypes = ["page"]
 	# If social media links are enabled then enable this to fetch icons from CDN instead of hosted on your site.
-	featherIconsCDN = true
+	awesomeIconsCDN = true
 
 	# Switch to dark mode or auto detect mode from OS (Optional).
 	# "dark" will set mode to dark and "auto" will switch to dark mode if OS is in dark mode.
@@ -48,7 +48,17 @@ weight = 4
 
 # social
 [[params.social]]
-name = "RSS FEED"
+name = "Телеграм"
+icon = "telegram"
+url = "https://t.me/severnayachemchu"
+
+[[params.social]]
+name = "ВКонтакте"
+icon = "vk"
+url = "https://vk.com/snpnp"
+
+[[params.social]]
+name = "RSS"
 icon = "rss"
 url = "/news/index.xml"
 
