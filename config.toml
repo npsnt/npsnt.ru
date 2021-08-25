@@ -1,4 +1,4 @@
-baseURL = "https://npsnt.ru"
+baseURL = "https://npsnt.ru/"
 languageCode = "ru-ru"
 title = "Северная Жемчужина"
 theme = "ezhil"
