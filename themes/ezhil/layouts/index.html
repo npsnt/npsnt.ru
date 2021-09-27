@@ -13,7 +13,7 @@
 				{{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
 				{{ range $paginator.Pages }}
 				<div class="post">
-					<div class="meta">{{ time.Format "02.01.2006 15:04 MST" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
+					<div class="meta">{{ time.Format "02.01.2006 15:04" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
 					<h4 class="summary">{{.Title}}</h4>
 					<span class="description">
 						{{ if isset .Params "description" }}
