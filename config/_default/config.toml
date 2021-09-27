@@ -3,6 +3,7 @@ languageCode = "ru-ru"
 title = "Северная Жемчужина"
 theme = "ezhil"
 copyright = "© 2021 СНТ Северная Жемчужина"
+defaultContentLanguage = 'ru'
 
 [params]
 	# Blog subtitle which appears below blog title. Supports markdown.
