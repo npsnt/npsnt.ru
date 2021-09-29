@@ -245,6 +245,11 @@ pre code {
     text-transform: capitalize;
 }
 
+.header .site-title {
+    display: flex;
+    justify-content: space-between;
+}
+
 .header .site-description {
     display: flex;
     justify-content: space-between;
