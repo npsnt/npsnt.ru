@@ -26,6 +26,8 @@ defaultContentLanguage = 'ru'
 	# you can specify custom css path as `css/custom.css`.
 	customCSS = "css/light.css"
 
+	showTemp = true
+
 # main buttons
 [[menu.main]]
 name = "Новости"
