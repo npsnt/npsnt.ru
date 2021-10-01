@@ -35,16 +35,6 @@
 	{{- if and (isset .Site.Params "social") (isset .Site.Params "awesomeiconscdn") (eq .Site.Params.awesomeIconsCDN true) -}}
 	<link rel="stylesheet" href="css/font-awesome.css">
 	{{ end }}
-	<script src="{{ .Site.BaseURL }}js/main.js"></script>
-	{{- if isset .Site.Params "customjs" -}}
-	{{- range .Site.Params.customJS }}
-	{{- if or (hasPrefix . "http://") (hasPrefix . "https://") }}
-	<script src="{{ . }}"></script>
-	{{- else }}
-	<script src="{{ $.Site.BaseURL }}{{ . }}"></script>
-	{{- end }}
-	{{- end }}
-	{{- end }}
 
 	{{ if eq hugo.Environment "uat"	 }}
 	{{ $vars := resources.Get "js/uat_vars.js" }}
