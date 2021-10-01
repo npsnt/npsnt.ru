@@ -1,0 +1,1 @@
+const tempUrl = 'https://lk.npsnt.ru/temperature';

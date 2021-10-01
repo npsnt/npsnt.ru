@@ -1,5 +1,5 @@
 function fetchTemperature() {
-    fetch('https://lk.npsnt.ru/temperature')
+    fetch(tempUrl)
         .then(response => response.json())
         .then(json => {
             if (json.hasOwnProperty('Temperature')) {
