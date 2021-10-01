@@ -1,7 +1,6 @@
 baseURL = "https://npsnt.ru/"
 languageCode = "ru-ru"
 title = "Северная Жемчужина"
-theme = "ezhil"
 copyright = "© 2021 СНТ Северная Жемчужина"
 defaultContentLanguage = 'ru'
 

@@ -45,4 +45,17 @@
 	{{- end }}
 	{{- end }}
 	{{- end }}
+
+	{{ if eq hugo.Environment "uat"	 }}
+	{{ $vars := resources.Get "js/uat_vars.js" }}
+	<script type="text/javascript" src="{{ $vars.RelPermalink }}"></script>
+	{{ else }}
+	{{ $vars := resources.Get "js/prod_vars.js" }}
+	<script type="text/javascript" src="{{ $vars.RelPermalink }}"></script>
+	{{ end }}
+
+	{{ $tempFetchJs := resources.Get "js/temp_fetch.js" }}
+
+	{{ $bundle := slice $tempFetchJs | resources.Concat "/js/bundle.js" }}
+	<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
 </head>
