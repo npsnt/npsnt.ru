@@ -38,7 +38,7 @@
 
 	{{- if (eq .Site.Params.showTemp true) -}}
 		{{ $vars := (cond (eq hugo.Environment "uat") (resources.Get "js/uat_vars.js") (resources.Get "js/vars.js") ) }}
-		{{ $weatherServiceJs := resources.Get "js/weatherService.js" }}
+		{{ $weatherServiceJs := resources.Get "js/weather-service.js" }}
 		{{ $tempFetchJs := resources.Get "js/tempFetch.js" }}
 		{{ $bundle := slice $weatherServiceJs $vars $tempFetchJs | resources.Concat "/js/bundle.js" }}
 	<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>

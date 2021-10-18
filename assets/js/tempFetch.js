@@ -1,5 +1,5 @@
 let weatherErrorsCount = 0
-const weatherClient = new window.weatherService.ru.npsnt.service.weather.WeatherServiceClient(host)
+const weatherClient = new weatherService.ru.npsnt.service.weather.WeatherServiceClient(host)
 function fetchTemperature(maxErrors) {
     weatherClient.latestTemp()
         .then(
