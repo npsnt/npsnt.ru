@@ -1,7 +1,4 @@
 <div class="header">
-	{{- if (eq .Site.Params.showTemp true) -}}
-	<script>fetchTemperature(); setInterval(fetchTemperature, 300000)</script>
-	{{- end -}}
 	<base href="{{ .Site.BaseURL }}">
 	<div class="site-title">
 		<h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>

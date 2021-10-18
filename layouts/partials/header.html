@@ -36,16 +36,11 @@
 	<link rel="stylesheet" href="css/font-awesome.css">
 	{{ end }}
 
-	{{ if eq hugo.Environment "uat"	 }}
-	{{ $vars := resources.Get "js/uat_vars.js" }}
-	<script type="text/javascript" src="{{ $vars.RelPermalink }}"></script>
-	{{ else }}
-	{{ $vars := resources.Get "js/prod_vars.js" }}
-	<script type="text/javascript" src="{{ $vars.RelPermalink }}"></script>
-	{{ end }}
-
-	{{ $tempFetchJs := resources.Get "js/temp_fetch.js" }}
-
-	{{ $bundle := slice $tempFetchJs | resources.Concat "/js/bundle.js" }}
+	{{- if (eq .Site.Params.showTemp true) -}}
+		{{ $vars := (cond (eq hugo.Environment "uat") (resources.Get "js/uat_vars.js") (resources.Get "js/vars.js") ) }}
+		{{ $weatherServiceJs := resources.Get "js/weatherService.js" }}
+		{{ $tempFetchJs := resources.Get "js/tempFetch.js" }}
+		{{ $bundle := slice $weatherServiceJs $vars $tempFetchJs | resources.Concat "/js/bundle.js" }}
 	<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
+	{{- end -}}
 </head>
