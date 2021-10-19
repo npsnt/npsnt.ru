@@ -33,21 +33,6 @@ name = "Новости"
 url = "/"
 weight = 1
 
-[[menu.main]]
-name = "О нас"
-url = "/about/"
-weight = 2
-
-[[menu.main]]
-name = "Контакты"
-url = "/contacts/"
-weight = 3
-
-[[menu.main]]
-name = "Личный кабинет"
-url = "/profile/"
-weight = 4
-
 # social
 [[params.social]]
 name = "Телеграм"
